@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A0B-bh-zWG">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Red-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" title="Red" definesPresentationContext="YES" modalPresentationStyle="currentContext" id="BYZ-38-t0r" customClass="ViewController" customModule="PresentingViewControllers" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UAI-93-NhS">
+                                <rect key="frame" x="159" y="111" width="75.333333333333314" height="97"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bzz-ao-QU9" userLabel="Show">
+                                        <rect key="frame" x="4.6666666666666643" y="0.0" width="66" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show"/>
+                                        <connections>
+                                            <action selector="showVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gvI-d9-yxG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="characterWrap" id="mot-qj-qCD">
+                                        <rect key="frame" x="2.3333333333333357" y="20" width="70.666666666666657" height="0.66666666666666785"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show Detail">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="showDetail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AUL-Cz-urA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VZK-tb-Wj3" userLabel="Present">
+                                        <rect key="frame" x="4" y="40.666666666666657" width="67.333333333333329" height="56.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Present">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="present:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LTj-k7-8Jz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fnh-OQ-NN3">
+                                <rect key="frame" x="0.0" y="216" width="393" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="6nq-MD-VCw"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="WyY-6r-jCB"/>
+                                </connections>
+                            </pickerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbj-KM-DHj">
+                                <rect key="frame" x="8" y="452" width="377" height="358"/>
+                                <connections>
+                                    <segue destination="XCU-sy-1RL" kind="embed" id="yFJ-Wh-Hs2"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="UAI-93-NhS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="45D-k5-VOp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hbj-KM-DHj" secondAttribute="bottom" constant="8" id="51S-W0-JXq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fnh-OQ-NN3" secondAttribute="trailing" id="7Iq-tJ-vTW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hbj-KM-DHj" secondAttribute="trailing" constant="8" id="My6-Kb-yJh"/>
+                            <constraint firstItem="Fnh-OQ-NN3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N22-Vx-qNO"/>
+                            <constraint firstItem="hbj-KM-DHj" firstAttribute="top" secondItem="Fnh-OQ-NN3" secondAttribute="bottom" constant="20" id="PTB-Oq-s17"/>
+                            <constraint firstItem="UAI-93-NhS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="dI7-ZI-wzm"/>
+                            <constraint firstItem="hbj-KM-DHj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="nkn-HD-PRA"/>
+                            <constraint firstItem="Fnh-OQ-NN3" firstAttribute="top" secondItem="UAI-93-NhS" secondAttribute="bottom" constant="8" id="pbP-xG-InI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Red" id="CSq-rl-P0g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959.5419847328244" y="-31.690140845070424"/>
+        </scene>
+        <!--Green-->
+        <scene sceneID="Ewo-nU-CTs">
+            <objects>
+                <viewController storyboardIdentifier="green" title="Green" providesPresentationContextTransitionStyle="YES" modalPresentationStyle="pageSheet" id="SvZ-EI-4eK" customClass="ViewController" customModule="PresentingViewControllers" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iwZ-6c-biv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="U9L-7d-Nuh"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MTE-64-prt"/>
+                    <connections>
+                        <outlet property="pickerView" destination="Fnh-OQ-NN3" id="YEc-jF-AZq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tw-eE-4rn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="-27"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7MJ-jb-P9Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A0B-bh-zWG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LEe-C1-EYI">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JFQ-Nl-2vN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0P-8B-SMD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35.877862595419849" y="-31.690140845070424"/>
+        </scene>
+        <!--Contained View Controller-->
+        <scene sceneID="aEk-6M-CxY">
+            <objects>
+                <viewController id="XCU-sy-1RL" customClass="ContainedViewController" customModule="PresentingViewControllers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tjv-QM-cWu">
+                        <rect key="frame" x="0.0" y="0.0" width="377" height="358"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WAB-r5-tYu">
+                                <rect key="frame" x="151" y="8" width="75.333333333333314" height="372.66666666666669"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5mB-cj-ikI">
+                                        <rect key="frame" x="0.0" y="0.0" width="75.333333333333329" height="51.333333333333336"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iuE-AC-90E">
+                                                <rect key="frame" x="13" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleDefinesContext:" destination="XCU-sy-1RL" eventType="valueChanged" id="Ara-Fp-Rih"/>
+                                                </connections>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="defines presentation context" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEi-6W-8g2" userLabel="defines presentation context">
+                                                <rect key="frame" x="0.0" y="31" width="75.333333333333329" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="lTg-Vw-FDo" userLabel="Show">
+                                        <rect key="frame" x="4.6666666666666643" y="71.333333333333329" width="66" height="54.333333333333329"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show"/>
+                                        <connections>
+                                            <action selector="showVC:" destination="XCU-sy-1RL" eventType="touchUpInside" id="5ek-dJ-JEm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="characterWrap" id="Yx6-4D-8Ks">
+                                        <rect key="frame" x="2.3333333333333357" y="145.66666666666666" width="70.666666666666657" height="56.333333333333343"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show Detail">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="showDetail:" destination="XCU-sy-1RL" eventType="touchUpInside" id="LB9-Kl-Xfw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xAa-2i-ip8" userLabel="Present">
+                                        <rect key="frame" x="4" y="222" width="67.333333333333329" height="56.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Present">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="present:" destination="XCU-sy-1RL" eventType="touchUpInside" id="KCz-rA-2Gw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH1-A0-FrJ" userLabel="Present Alert">
+                                        <rect key="frame" x="4" y="298.33333333333331" width="67.333333333333329" height="74.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Present Alert"/>
+                                        <connections>
+                                            <action selector="presentAlert" destination="XCU-sy-1RL" eventType="touchUpInside" id="S6G-7u-SSa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="Ntu-xs-Foi"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DWC-rd-xTa"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="WAB-r5-tYu" firstAttribute="centerX" secondItem="Tjv-QM-cWu" secondAttribute="centerX" id="VGX-ON-UPx"/>
+                            <constraint firstItem="WAB-r5-tYu" firstAttribute="top" secondItem="Tjv-QM-cWu" secondAttribute="top" constant="8" id="xJl-tc-gcf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="defineContextSwitch" destination="iuE-AC-90E" id="wkK-S4-2Qs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ep9-Cd-vXu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960" y="594"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
