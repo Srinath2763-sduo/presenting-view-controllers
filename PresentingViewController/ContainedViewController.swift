@@ -68,6 +68,10 @@ class Coordinator: NSObject {
                 vc.dismiss(animated: true)
             })
             
+            //IMPORTANT -
+            //I used this to adapt alert controllers modalPresentationStyle to .currentContext but the app crashes with
+            // "The presentation controller of an alert controller presenting as an alert must not have its delegate modified.
+            // alert.presentationController?.delegate = self
         
             vc.definesPresentationContext = true
             vc.present(alert, animated: true)
