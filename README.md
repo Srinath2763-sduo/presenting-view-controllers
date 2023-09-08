@@ -6,7 +6,7 @@
 
 2. Red View Controller exposes a picker which dynamically sets the `modalPresentationStyle` of the Green View Controller 
 
-3. Anytime you present a view controller, Green View Controller is instantiated and presented / showed / showed detail of based on the picker value selected on the red view controller.
+3. Anytime you present a view controller, Green View Controller is instantiated and presented / showed / showed detail of, based on the picker value selected.
 
 4. Yellow View is embedded in a container view controller. clicking on show / present / show detail calls appropriate methods on the yellow view controller.
 
