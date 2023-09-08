@@ -10,6 +10,6 @@
 
 4. Yellow View is embedded in a container view controller. clicking on show / present / show detail calls appropriate methods on the yellow view controller.
 
-#To see the actual magic:
+# To see the actual magic:
 ## choose current context in the picker and on the yellow view controller (embedded) click `present` button  
 
